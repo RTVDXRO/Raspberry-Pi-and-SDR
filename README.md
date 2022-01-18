@@ -38,7 +38,7 @@
           <div class="contentsPanel">
             <div class="contentsHeader">Contents:</div>
             <ul>
-              <li> <span></span>Overview
+              <li><span></span>Overview
                 <ul>
                   <li>1.1&nbsp; <a href="#Raspberry_Hardware_">Raspberry Hardware</a><br></li>
                   <li>1.2&nbsp; <a href="#Raspberry_-_Raspian_Buster_Install">Raspian Buster Install</a><br></li>
@@ -250,7 +250,9 @@ href="https://www.chiark.greenend.org.uk/%7Esgtatham/putty/latest.html">Putty</a
           sudo cp 20.dto /boot/overlays/waveshare35a.dtbo<br>
           sudo reboot<br>
           etc.
-          <h2><a name="Install_RTL-SDR_USB_Drivers:_"></a>Install RTL-SDR USB Driver<br></h2>
+          <h2><a name="Install_RTL-SDR_USB_Drivers:_"></a>Install
+            RTL-SDR USB Drivers:<br>
+          </h2>
           Open the terminal and Install the necessary tools:<br>
           <br>
           sudo apt-get install git cmake build-essential
