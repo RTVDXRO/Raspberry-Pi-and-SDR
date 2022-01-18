@@ -250,9 +250,7 @@ href="https://www.chiark.greenend.org.uk/%7Esgtatham/putty/latest.html">Putty</a
           sudo cp 20.dto /boot/overlays/waveshare35a.dtbo<br>
           sudo reboot<br>
           etc.
-          <h2><a name="Install_RTL-SDR_USB_Drivers:_"></a>Install
-            RTL-SDR USB Drivers:<br>
-          </h2>
+          <h2><a name="Install_RTL-SDR_USB_Drivers:_"></a>Install RTL-SDR USB Driver<br></h2>
           Open the terminal and Install the necessary tools:<br>
           <br>
           sudo apt-get install git cmake build-essential
