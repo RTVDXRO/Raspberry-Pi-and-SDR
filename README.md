@@ -1880,10 +1880,17 @@ href="https://github.com/JvanKatwijk/qt-dab#configuring-using-the-qt-dabpro-file
 href="https://github.com/jketterl/openwebrx/wiki/Manual-Package-installation-%28including-digital-voice%29"
             target="_blank">https://github.com/jketterl/openwebrx/wiki/Manual-Package-installation-(including-digital-voice)</a><br>
           <br>
-          For decoding nfm Radiosonde's in windows a few tweaks are
-          needed:<br>
+          Decoding RS41 sondes  in  combination with OpenWebRX 1.1.0 and
+          1.2.0 will fail without a small patch in de source code.<br>
           <br>
-          Edit config_webrx.py:<br>
+          To filter the CTCSS signal in the NFM section de-emphasis is enabled by purpose.<br>
+          <br>
+          For decoding the RS41 signal the full  audio spectrum is needed from  0 herz.<br>
+          <br>
+          The most ideal option is to get an option in OpenWebRX to enable
+          or disable the de-emphasis but at this moment it needs to be done in the code. <br>
+          <br>
+          Older versions prior OpenWebRX 1.2.0 Edit config_webrx.py:<br>
           <br>
           Change, audio_compression="none"<br>
           <br>
@@ -1896,6 +1903,15 @@ href="https://github.com/jketterl/openwebrx/wiki/Manual-Package-installation-%28
           Comment out #&nbsp; "csdr deemphasis_nfm_ff {audio_rate}",<br>
           <br>
           Radiosonde decoding programs should work know.<br>
+          <br>      
+          Patching OpenWebRX 1.2.0 for RS41 <br>
+          <br>
+          copy /lib/python3/dist-packages/csdr/chain/analog.py for backup<br>
+          edit /lib/python3/dist-packages/csdr/chain/analog.py 
+          jump to line 29
+          add a # in front of the NfmDeemphasis(sampleRate),
+          and save the file 
+          restart OpenWebRX systemctl restart openwebrx<br>
           <h2><a name="RaspAP_"></a>RaspAP<br>
           </h2>
           <br>
